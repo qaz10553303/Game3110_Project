@@ -111,13 +111,13 @@ def simulateMatch(player1,player2,sock):
       player2['Lose']=str(int(player2['Lose'])+1)
       player1['MMR']=str(int(player1['MMR'])+100+(p1k-p1d)*20)
       player2['MMR']=str(int(player1['MMR'])-50+(p2k-p2d)*20)
-      winner="player1"
+      winner=player1['UserName']
    elif temp==2:
       player2['Win']=str(int(player2['Win'])+1)
       player1['Lose']=str(int(player1['Lose'])+1)
       player1['MMR']=str(int(player1['MMR'])-50+(p1k-p1d)*20)
       player2['MMR']=str(int(player1['MMR'])+100+(p2k-p2d)*20)
-      winner="player1"
+      winner=player2['UserName']
       
    gameId=getGameEvent()+1
    print(gameId)
